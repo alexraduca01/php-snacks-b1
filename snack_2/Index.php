@@ -32,9 +32,7 @@ $age = $_GET['age'];
             
             if(strlen($name) > 3 && strpos($email ,'.') && strpos($email ,'@') && is_numeric($age)) {
                 echo "<p>Accesso Riuscito</p>";
-            } else {
-                echo '
-                
+            } else { ?>
                 <form action="index.php" method="GET">
                     <label for="email" class="form-label">Email</label>
                     <input type="text" class="form-control" id="email" name="email" placeholder="Inserisci la tua mail">
@@ -44,11 +42,7 @@ $age = $_GET['age'];
                     <input type="text" class="form-control" id="age" name="age" placeholder="Inserisci la tua età">
                     <button class="mt-3 btn btn-success">Submit</button>
                 </form>
-
-                ';
-            }
-            
-            ?>
+            <?php } ?>
         </div>
     </body>
 
